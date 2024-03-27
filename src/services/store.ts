@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { tagApi } from "./slices/tags/tags";
 
 export const store = configureStore({
   reducer: {
