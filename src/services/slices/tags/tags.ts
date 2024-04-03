@@ -44,7 +44,7 @@ export const tagApi = createApi({
           ...(site && { site }),
         });
         return {
-          url: `?${params.toString()}`,
+          url: `?${params.toString()}&filter=!nNPvSNVZJS`,
           method: "GET",
         };
       },

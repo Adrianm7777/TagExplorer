@@ -11,7 +11,11 @@ interface TagData {
 }
 
 interface TagsDataResponse {
-  tags: TagData[];
+  items: TagData[];
+  has_more: boolean;
+  quota_max: number;
+  quota_remaining: number;
+  total: number;
 }
 
 interface Collective {

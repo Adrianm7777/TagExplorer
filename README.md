@@ -1,30 +1,58 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Stronicowana Tabela Tagów
 
-Currently, two official plugins are available:
+Projekt prezentuje stronicowaną tabelę tagów wraz z liczbą powiązanych postów, wykorzystując Redux do zarządzania stanem i Bootstrap jako bibliotekę komponentów UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funkcjonalności
 
-## Expanding the ESLint configuration
+- **Stronicowana tabela tagów**: Wyświetla tagi wraz z liczbą powiązanych postów.
+- **Konfigurowalna liczba elementów na stronie**: Umożliwia użytkownikowi wybór liczby tagów wyświetlanych na jednej stronie tabeli.
+- **Sortowanie**: Umożliwia sortowanie tabeli według wybranego pola i kierunku sortowania.
+- **Stany ładowania danych i błędów**: Odpowiednie informacje są wyświetlane podczas ładowania danych oraz w przypadku wystąpienia błędów.
+- **UI**: Wykorzystuje gotową bibliotekę komponentów UI - Bootstrap.
+- **Zarządzanie stanem i pobieranie danych**: Używa Redux oraz dodatkowych bibliotek do efektywnego zarządzania stanem aplikacji i pobierania danych.
+- **Storybook**: Prezentacja wykorzystanych komponentów składowych aplikacji za pomocą Storybook.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologie
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- Redux
+- Bootstrap
+- React-Bootstrap
+- Redux Toolkit
+- React-Redux
+- Axios lub RTK Query (dla pobierania danych)
+- Storybook (dla dokumentacji komponentów)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Instalacja i uruchomienie
+
+Aby uruchomić projekt lokalnie, wykonaj poniższe kroki.
+
+### Klonowanie repozytorium
+
+```bash
+git clone https://github.com/twoje-repozytorium/projekt.git
+cd projekt
+
+Instalacja zależności
+Użyj npm ci do zainstalowania zależności z zablokowanymi wersjami, zapewniając konsystencję środowiska.
+
+npm ci
+Uruchomienie projektu
+Aby uruchomić aplikację w trybie deweloperskim:
+
+npm start
+Aplikacja będzie dostępna pod adresem http://localhost:3000.
+
+Uruchomienie Storybook
+Aby uruchomić Storybook:
+
+npm run storybook
+
+Storybook będzie dostępny pod adresem http://localhost:6006.
+
+
+
+
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
